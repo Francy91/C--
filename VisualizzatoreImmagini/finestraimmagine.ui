@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FinestraImmagine</class>
+ <widget class="QMainWindow" name="FinestraImmagine">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Visualizzatore Di Immagini</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="risorse.qrc">
+    <normaloff>:/icon/icon/icon.jpg</normaloff>:/icon/icon/icon.jpg</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>400</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="action_Apri_Cartella"/>
+   </widget>
+   <widget class="QMenu" name="menu_Apri_Cartella">
+    <property name="title">
+     <string>&amp;Immagine</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionPrecedente"/>
+    <addaction name="actionSuccessiva"/>
+    <addaction name="actionNussuna_Immagine"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoom"/>
+    <addaction name="actionZoom_2"/>
+    <addaction name="actionAdatta_Zoom"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Apri_Cartella"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Apri_Cartella"/>
+   <addaction name="separator"/>
+   <addaction name="actionPrecedente"/>
+   <addaction name="actionSuccessiva"/>
+   <addaction name="actionNussuna_Immagine"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoom"/>
+   <addaction name="actionZoom_2"/>
+   <addaction name="actionAdatta_Zoom"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Apri_Cartella">
+   <property name="icon">
+    <iconset resource="risorse.qrc">
+     <normaloff>:/icon/Icons32x32/folder_explorer.png</normaloff>:/icon/Icons32x32/folder_explorer.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Apri Cartella</string>
+   </property>
+   <property name="statusTip">
+    <string>Seleziona l'origine delle immagini</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionPrecedente">
+   <property name="icon">
+    <iconset resource="risorse.qrc">
+     <normaloff>:/icon/Icons32x32/arrow_left.png</normaloff>:/icon/Icons32x32/arrow_left.png</iconset>
+   </property>
+   <property name="text">
+    <string>Precedente</string>
+   </property>
+   <property name="statusTip">
+    <string>Visualizza l'immagine precedente</string>
+   </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
+  </action>
+  <action name="actionSuccessiva">
+   <property name="icon">
+    <iconset resource="risorse.qrc">
+     <normaloff>:/icon/Icons32x32/arrow_right.png</normaloff>:/icon/Icons32x32/arrow_right.png</iconset>
+   </property>
+   <property name="text">
+    <string>Successiva</string>
+   </property>
+   <property name="statusTip">
+    <string>Visualizza l'immagine successiva</string>
+   </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
+  </action>
+  <action name="actionNussuna_Immagine">
+   <property name="icon">
+    <iconset resource="risorse.qrc">
+     <normaloff>:/icon/Icons32x32/no_image.png</normaloff>:/icon/Icons32x32/no_image.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nussuna Immagine</string>
+   </property>
+   <property name="statusTip">
+    <string>Non visualizza alcuna immagine</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionZoom">
+   <property name="icon">
+    <iconset resource="risorse.qrc">
+     <normaloff>:/icon/Icons32x32/zoom_in.png</normaloff>:/icon/Icons32x32/zoom_in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom +</string>
+   </property>
+   <property name="statusTip">
+    <string>Aumenta lo zoom</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl++</string>
+   </property>
+  </action>
+  <action name="actionZoom_2">
+   <property name="icon">
+    <iconset resource="risorse.qrc">
+     <normaloff>:/icon/Icons32x32/magnifier_zoom_out.png</normaloff>:/icon/Icons32x32/magnifier_zoom_out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom -</string>
+   </property>
+   <property name="statusTip">
+    <string>Diminuisce lo zoom</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+-</string>
+   </property>
+  </action>
+  <action name="actionAdatta_Zoom">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="risorse.qrc">
+     <normaloff>:/icon/Icons32x32/zoom_fit.png</normaloff>:/icon/Icons32x32/zoom_fit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Adatta Zoom</string>
+   </property>
+   <property name="statusTip">
+    <string>Adatta lo zoom all'immagine</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="risorse.qrc"/>
+ </resources>
+ <connections/>
+</ui>

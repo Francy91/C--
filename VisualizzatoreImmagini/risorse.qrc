@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/icon.jpg</file>
+        <file>Icons32x32/folder_explorer.png</file>
+        <file>Icons32x32/arrow_left.png</file>
+        <file>Icons32x32/arrow_right.png</file>
+        <file>Icons32x32/no_image.png</file>
+        <file>Icons32x32/zoom_in.png</file>
+        <file>Icons32x32/magnifier_zoom_out.png</file>
+        <file>Icons32x32/zoom_fit.png</file>
+        <file>icon/divieto.jpg</file>
+        <file>icon/Divieto generico.png</file>
+    </qresource>
+</RCC>
